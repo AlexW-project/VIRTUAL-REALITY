@@ -4,24 +4,56 @@
   </head>
   <body>
     <a-scene>
-      <a-box wireframe=true height="3" width="4" depth="3" </a-box>
-      <a-box width="4" height="1.5" depth="3" rotation="0 0 0" color="#FF0000"></a-box>
-      <a-box position="0 1 0" width="1" height="2" depth="2.5" rotation="0 0 90" color="#FFFFFF"></a-box>
-      <a-cylinder position="-1.5 -1 -1.5" radius=".6" height=".2" depth=".2s" rotation="90 0 0" color="#000000"></a-cylinder>
+      <!-- Wireframe container -->
+      <a-box wireframe="true" height="3" width="4" depth="3" position="0 0 0"></a-box>
 
+      <!-- Car base (main body) -->
+      <a-box position="0 0 0" width="4" height="1.2" depth="3" color="#C00000"></a-box>
 
-      <a-cylinder position="-1.5 -1 1.5" radius=".6" height=".2" depth=".2s" rotation="90 0 0" color="#000000"></a-cylinder>
-      <a-cylinder position="-1.5 -1 1.5" radius=".3" height=".25" depth=".2s" rotation="90 0 0" color="#818589>/a-cylinder>
+      <!-- Hood (slightly slanted by lowering front) -->
+      <a-box position="1 0.3 0" width="2" height="0.6" depth="3" color="#B00000"></a-box>
 
-      <a-cylinder position="1.5 -1 -1.5  radius=".6" height=".2" depth=".2s" rotation="90 0 0" color="#000000"></a-cylinder>
-      <a-cylinder position="1.5 -1 -1.5" radius=".3" height=".25" depth=".2s" rotation="90 0 0" color="#818589"></a-cylinder>
+      <!-- Roof -->
+      <a-box position="0 1 0" width="2.5" height="1" depth="2" color="#FFFFFF"></a-box>
 
+      <!-- Spoiler at back -->
+      <a-box position="-2 0.8 0" width="0.2" height="0.2" depth="2" color="#C00000"></a-box>
+      <a-box position="-2.3 1.1 0" width="0.6" height="0.1" depth="2.5" color="#C00000"></a-box>
 
-      <a-cylinder position="1.5 -1 1.5" radius=".6" height=".2" depth=".2s" rotation="90 0 0" color="#000000"></a-cylinder>
-      <a-cylinder position="1.5 -1 1.5" radius=".3" height=".25" depth=".2s" rotation="90 0 0" co0lor="##818589"></a-cylinder>
+      <!-- Front bumper -->
+      <a-box position="2.1 -0.3 0" width="0.3" height="0.5" depth="3.2" color="#800000"></a-box>
 
-      <a-plane position="-1 -1.5 .5" rotation="-90 0 0" width="15" height="10" color="#A9A9A9"></a-plane>
-      <a-sky color="#ADD8E6"></a-sky>
+      <!-- Side mirrors -->
+      <a-box position="0.8 1 1.2" width="0.2" height="0.2" depth="0.6" color="#800000"></a-box>
+      <a-box position="0.8 1 -1.2" width="0.2" height="0.2" depth="0.6" color="#800000"></a-box>
+
+      <!-- Wheels -->
+      <a-cylinder position="-1.5 -1 -1.5" radius="0.6" height="0.4" rotation="90 0 0" color="#000000"></a-cylinder>
+      <a-cylinder position="-1.5 -1 -1.5" radius="0.3" height="0.45" rotation="90 0 0" color="#818589"></a-cylinder>
+
+      <a-cylinder position="-1.5 -1 1.5" radius="0.6" height="0.4" rotation="90 0 0" color="#000000"></a-cylinder>
+      <a-cylinder position="-1.5 -1 1.5" radius="0.3" height="0.45" rotation="90 0 0" color="#818589"></a-cylinder>
+
+      <a-cylinder position="1.5 -1 -1.5" radius="0.6" height="0.4" rotation="90 0 0" color="#000000"></a-cylinder>
+      <a-cylinder position="1.5 -1 -1.5" radius="0.3" height="0.45" rotation="90 0 0" color="#818589"></a-cylinder>
+
+      <a-cylinder position="1.5 -1 1.5" radius="0.6" height="0.4" rotation="90 0 0" color="#000000"></a-cylinder>
+      <a-cylinder position="1.5 -1 1.5" radius="0.3" height="0.45" rotation="90 0 0" color="#818589"></a-cylinder>
+
+      <!-- Headlights -->
+      <a-sphere position="2.3 0 0.9" radius="0.2" color="#FFFF99"></a-sphere>
+      <a-sphere position="2.3 0 -0.9" radius="0.2" color="#FFFF99"></a-sphere>
+
+      <!-- Tail lights -->
+      <a-box position="-2 0 0.9" width="0.2" height="0.3" depth="0.3" color="#FF0000"></a-box>
+      <a-box position="-2 0 -0.9" width="0.2" height="0.3" depth="0.3" color="#FF0000"></a-box>
+
+      <!-- Scenic background -->
+      <a-sky src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/sechelt.jpg"></a-sky>
+
+      <!-- Asphalt floor -->
+      <a-plane position="0 -1.5 0" rotation="-90 0 0" width="40" height="40"
+               src="https://cdn.aframe.io/a-painter/images/floor.jpg"></a-plane>
     </a-scene>
   </body>
 </html>
